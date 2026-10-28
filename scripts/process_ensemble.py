@@ -62,9 +62,9 @@ for a,tau in zip(ax[1:],[.1,.5]):
     a.plot(f,data[n,2,tau,'truth']/v,color='black',ls=':',lw=1.3,label='Population shape')
     a.set_title(fr'Persistent volatility, $\tau={tau:g}$',fontsize=9)
     if tau==.1:a.legend(frameon=False,loc='upper right',fontsize=6.2)
-    a.set_ylim(0,2.1 if tau==.1 else 1.4)
+    a.set_ylabel('Normalized spectrum');a.set_ylim(0,2.1 if tau==.1 else 1.4)
 for a in ax:
-    a.set_xlim(0,.25);a.set_xticks([0,.1,.2]);a.set_xlabel(r'$f=\omega/(2\pi)$');a.grid(alpha=.15)
+    a.set_xlim(0,.5);a.set_xticks([0,.25,.5]);a.set_xlabel(r'$f=\omega/(2\pi)$');a.grid(alpha=.15)
 fig.tight_layout(w_pad=1.0);fig.savefig(F/'qser_ensemble_spectra.pdf');plt.close(fig)
 
 fig,ax=plt.subplots(1,2,figsize=(6.6,2.65))
@@ -72,8 +72,8 @@ tau=.1;P=data[n,2,tau,'QP'];T=data[n,2,tau,'truth']
 for b,color,label in [(1,blue,r'$Y_t$'),(2,red,r'$2Y_t$')]:
     ax[0].plot(f,b*b*P.mean(axis=0),color=color,label=label)
     ax[0].plot(f,b*b*T,color=color,ls=':',lw=1.2)
-ax[0].set(xlim=(0,.25),xlabel=r'$f=\omega/(2\pi)$',ylabel='Unscaled quantile spectrum',title=r'Same crossings, different amplitude')
-ax[0].set_ylim(0,4*T.max()*1.07);ax[0].set_xticks([0,.1,.2])
+ax[0].set(xlim=(0,.5),xlabel=r'$f=\omega/(2\pi)$',ylabel='Unnormalized quantile spectrum',title=r'Same crossings, different amplitude')
+ax[0].set_ylim(0,4*T.max()*1.07);ax[0].set_xticks([0,.25,.5])
 ax[0].legend(frameon=False);ax[0].grid(alpha=.15)
 rr=pd.DataFrame(risks)
 for tau,color in [(.1,blue),(.5,green),(.9,red)]:

@@ -9,3 +9,7 @@ results/ensemble/Oracle_*.csv
 results/ensemble/Ordinary_*.csv
 results/ensemble/checks_[0-9]*.csv
 figures/
+data/
+results/study/gaussian_records.csv
+results/study/transformation_records.csv
+results/study/eeg_spectra.csv
