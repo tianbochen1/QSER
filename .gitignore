@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+results/ensemble/ensemble_*.rds
+results/ensemble/QP_*.csv
+results/ensemble/Crossing_*.csv
+results/ensemble/Oracle_*.csv
+results/ensemble/Ordinary_*.csv
+results/ensemble/checks_[0-9]*.csv
+figures/

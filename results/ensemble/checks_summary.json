@@ -1,0 +1,30 @@
+[
+  {
+    "n": 128,
+    "model": 1,
+    "fft_error": 4.2632564145606e-14,
+    "cross_scale_error": 0.0,
+    "qp_scale_relative_error": 8.06008142804764e-06
+  },
+  {
+    "n": 128,
+    "model": 2,
+    "fft_error": 5.6843418860808e-14,
+    "cross_scale_error": 0.0,
+    "qp_scale_relative_error": 2.64817439098619e-05
+  },
+  {
+    "n": 512,
+    "model": 1,
+    "fft_error": 6.3948846218409e-14,
+    "cross_scale_error": 0.0,
+    "qp_scale_relative_error": 9.26187202037657e-06
+  },
+  {
+    "n": 512,
+    "model": 2,
+    "fft_error": 7.105427357600999e-14,
+    "cross_scale_error": 0.0,
+    "qp_scale_relative_error": 2.59485916025507e-06
+  }
+]
